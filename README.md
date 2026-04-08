@@ -1,6 +1,4 @@
-Here’s the corrected version of your README with the simplified project structure and a fixed Markdown image link:
 
-````markdown
 # RecessionRiskForecast
 
 **Real-time recession risk forecasting using machine learning**
