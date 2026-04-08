@@ -141,21 +141,17 @@ python final_model.py
 
 ### 5. Visualization
 
-Generates three key charts saved as PNGs:
+### 5. Visualization
 
-* `recession_probability.png` – walk-forward out-of-sample predicted recession probabilities
-* `precision_recall_curve.png` – precision-recall curve for OOS predictions
-* `sahm_rule_indicator.png` – Sahm Rule labor market stress indicator
+Generates a single chart `recession_forecast.png` that combines:
 
-```python
-python visualize_forecast.py
-```
+* Forecasted recession probability over time  
+* Precision-Recall curve  
+* Sahm Rule labor market stress indicator  
 
-Example:
 
-<img src="recession_probability.png" width="700" height="450">
-<img src="precision_recall_curve.png" width="700" height="450">
-<img src="sahm_rule_indicator.png" width="700" height="450">
+
+<img src="recession_forecast.png" width="700" height="450">
 
 ---
 
