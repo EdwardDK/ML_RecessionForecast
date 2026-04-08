@@ -139,7 +139,7 @@ python main.py
 
 Example:
 
-<img src="recession_forecast.png](https://github.com/EdwardDK/ML_RecessionForecast/blob/main/recession_forecast.png?raw=true" width="700" height="450">
+<img src="https://github.com/EdwardDK/ML_RecessionForecast/blob/main/recession_forecast.png?raw=true" width="700" height="450">
 
 ---
 
