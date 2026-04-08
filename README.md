@@ -1,3 +1,6 @@
+Here’s the corrected version of your README with the simplified project structure and a fixed Markdown image link:
+
+````markdown
 # RecessionRiskForecast
 
 **Real-time recession risk forecasting using machine learning**
@@ -40,7 +43,7 @@ This project demonstrates **practical applications of time series ML**, feature 
 ```bash
 git clone https://github.com/yourusername/RecessionRiskForecast.git
 cd RecessionRiskForecast
-```
+````
 
 2. Create a virtual environment (optional but recommended):
 
@@ -79,8 +82,8 @@ FRED_API_KEY=your_fred_api_key_here
 
 The script fetches U.S. macroeconomic series from FRED and resamples them monthly:
 
-```python
-python data_fetching.py
+```bash
+python main.py
 ```
 
 Series fetched:
@@ -105,19 +108,11 @@ Derived and lagged features include:
 * Lagged features for 1, 3, 6, 12 months
 * Target: any recession within the next 6 months
 
-```python
-python feature_engineering.py
-```
-
 ---
 
 ### 3. Walk-Forward Cross-Validation
 
 Evaluate the model using **walk-forward CV** to ensure robust, out-of-sample predictions:
-
-```python
-python walk_forward_cv.py
-```
 
 * XGBoost classifier with Optuna hyperparameter tuning
 * Calibrated probabilities (isotonic or sigmoid)
@@ -128,30 +123,25 @@ python walk_forward_cv.py
 
 ### 4. Final Model Training
 
-Train the model on the **entire clean dataset** to generate current recession risk:
-
-```python
-python final_model.py
-```
-
-* Produces **latest probability estimate** for recession
-* Outputs **top 10 important predictors**
+Train the model on the **entire clean dataset** to generate current recession risk and top predictors.
 
 ---
 
 ### 5. Visualization
 
-### 5. Visualization
-
 Generates a single chart `recession_forecast.png` that combines:
 
-* Forecasted recession probability over time  
-* Precision-Recall curve  
-* Sahm Rule labor market stress indicator  
+* Forecasted recession probability over time
+* Precision-Recall curve
+* Sahm Rule labor market stress indicator
 
+```bash
+python main.py
+```
 
+Example:
 
-<img src="recession_forecast.png" width="700" height="450">
+<img src="recession_forecast.png](https://github.com/EdwardDK/ML_RecessionForecast/blob/main/recession_forecast.png?raw=true" width="700" height="450">
 
 ---
 
@@ -184,17 +174,11 @@ unrate_min_12
 
 ```
 RecessionRiskForecast/
-├─ data_fetching.py          # Fetch data from FRED
-├─ feature_engineering.py    # Create lagged/derived features
-├─ walk_forward_cv.py        # Train/evaluate XGBoost with walk-forward CV
-├─ final_model.py            # Train calibrated model on full dataset
-├─ visualize_forecast.py     # Generate charts for probability, PR curve, Sahm rule
-├─ .env                      # FRED API key
-├─ recession_probability.png
-├─ precision_recall_curve.png
-├─ sahm_rule_indicator.png
-├─ README.md                 # Project documentation
-└─ requirements.txt          # Python dependencies
+├─ main.py                 # Main script: fetch, feature engineer, train, visualize
+├─ .env                    # FRED API key
+├─ recession_forecast.png  # Combined chart with probability, PR curve, Sahm rule
+├─ README.md               # Project documentation
+└─ requirements.txt        # Python dependencies
 ```
 
 ---
