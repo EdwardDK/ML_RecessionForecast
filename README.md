@@ -1,5 +1,5 @@
 
-# RecessionRiskForecast
+# ML_RecessionForecast
 
 **Real-time recession risk forecasting using machine learning**
 
